@@ -1,13 +1,18 @@
 :root {
-    --primary-color: #ffffff;
-    --secondary-color: #0000ff;
-    --tertiary-color: #cc99ff;
+    --primary-color: #000000;
+    --alt-color: #ffffff;
+    --secondary-color: #ff9900;
+    --tertiary-color: #ffcc66;
   }
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
+  color: var(--primary-color);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Header and Nav bar start*/
@@ -66,3 +71,152 @@ header {
     text-shadow: none;
   }
   /* HEADER / NAVBAR STYLES END */
+  /* FOOTER STYLES START */
+footer {
+  background: var(--tertiary-color);
+  padding: 40px 35px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+footer h2 {
+  color: var(--secondary-color);
+  font-size: 30px;
+  margin: 0;
+}
+
+footer div {
+  line-height: 1.5;
+  text-align: right;
+}
+
+footer a {
+  color: var(--secondary-color);
+}
+/* END FOOTER STYLES */
+
+/* BODY */
+
+section {
+  padding: 60px;
+}
+
+.hero {
+  background-image: url("../images/mountains.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  background-attachment: scroll;
+  background-position: 80%;
+}
+
+.hero-cta {
+  width: 35%;
+  text-align: right;
+  margin: 3.5%;
+  color: var(--alt-color);
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.hero-cta h2 {
+  font-style: italic;
+  font-size: 55px;
+  color: var(--alt-color);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+/* CONTAINERS and FLEX */
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  background-color: aquamarine;
+  padding: 0;
+}
+
+.app {
+  order: 3;
+  height: 100px;
+  width: 100px;
+  background-color: #ff9900;
+  border: black solid 1px;
+}
+
+.app1 {
+  order: 1;
+}
+
+.app2 {
+  order: 2;
+  width: 200px;
+  flex-grow: 2;
+}
+
+@media screen and (max-width: 980px) {
+
+  .container {
+    background-color: var(--tertiary0-color);
+  }
+
+}
+
+@media  screen and (max-width: 768px) {
+
+  header nav {
+    font-size: larger;
+  }
+  .hero-cta h2 {
+    font-size: smaller;
+  }
+  .hero-cta {
+    font-size: smaller;
+  }
+
+  .container {
+    background-color: rgb(170, 152 , 251);
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-self: center;
+  }
+  .app {
+    width: 100%;
+  }
+  .app h3 {
+    font-size: larger;
+  }
+
+  .app1 {
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  header nav {
+    font-size: larger;
+  }
+  .hero-cta h2 {
+    font-size: smaller;
+  }
+  .hero-cta {
+    font-size: smaller;
+  }
+  .container {
+    background-color: cadetblue;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-self: center;
+  }
+  .app {
+    width: 100%;
+  } 
+  .app h3 {
+    font-size: larger;
+  }
+  .app1 {
+    height: 50px;
+  }
+}
