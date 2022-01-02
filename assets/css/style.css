@@ -1,6 +1,6 @@
 :root {
     --primary-color: bisque;
-    --secondary-color: orange;
+    --secondary-color: rgb(255, 217, 0);
     --tertiary-color: blue;
 }
 * {
@@ -13,27 +13,34 @@ body {
     background-color: var(--primary-color);
     font-family: Arial, Helvetica, sans-serif;
 }
-
+/* header and footer*/
 header {
     padding: 20px 35px;
     background-color: var(--secondary-color);
+    position: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
-
+header img {
+    justify-self: flex-start;
+}
 header h1 {
     font-weight: bold;
     font-size: 36px;
     color: var(--tertiary-color);
-    margin: 0;
     display: inline;
+    margin: 0;
+    align-self: flex-start;
+}
+header nav {
+    margin: 7px;
+    align-self: flex-end;
 }
 header a {
     text-decoration: none;
     color: var(--tertiary-color);
 }
-header nav {
-    float: right;
-    margin: 7px;
-}
+
 header nav ul li {
     display: inline;
 }
@@ -61,4 +68,76 @@ footer div {
 }
 footer a {
     color: var(--tertiary-color);
+}
+/* END HEADER AND FOOTER */
+/* BEGIN HERO */
+.hero {
+    background-image: url("../images/mountains.jpg");
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    position: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.hero-content {
+    color: var(--tertiary-color);
+    padding: 60px;
+    width: 500px;
+    height: 200px;
+    justify-self: flex-start;
+}
+/* WORK section */
+.work {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;   
+}
+.title {
+    background-color: var(--secondary-color);
+    width: 100px;
+    height: 200px;
+    justify-self: flex-start;
+}
+.art1 {
+    background-image: url("../images/RunBuddy.png");
+    background-size: cover;
+    background-position: center;
+    width: 600px;
+    height: 200px;
+    justify-self: flex-start;
+}
+.art2 {
+    background-image: url("../images/PasswordGenerator.png");
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 200px;
+    justify-self: flex-start;
+}
+
+/* responsive elements */
+
+@media  screen and (max-width: 980px) {
+    
+}
+
+@media  screen and (max-width: 768px) {
+    .header {
+        flex-wrap: column;
+    }
+    .hero-content {
+        font-size: smaller;
+    }
+}
+
+@media  screen and (max-width: 575px) {
+    .header {
+        flex-wrap: column;
+    }
+    .hero-content {
+        font-size: smaller;
+    }
 }
