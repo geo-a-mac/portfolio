@@ -101,21 +101,31 @@ footer a {
     height: 200px;
     justify-self: flex-start;
 }
-.art1 {
+
+#art1 {
     background-image: url("../images/RunBuddy.png");
     background-size: cover;
     background-position: center;
     width: 600px;
     height: 200px;
-    justify-self: flex-start;
+    justify-self: flex-start;   
 }
-.art2 {
+#art2 {
     background-image: url("../images/PasswordGenerator.png");
     background-size: cover;
     background-position: center;
     width: 300px;
     height: 200px;
-    justify-self: flex-start;
+    justify-self: flex-start;   
+}
+
+#art3 {
+    background-image: url("../images/WSA.png");
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 200px;
+    justify-self: flex-start;   
 }
 
 /* responsive elements */
